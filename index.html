@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Tourime</title>
+    <!--載入先後順序與響應速度有關-->
+    <!-- 載入ＣＳＳ--> 
+    <link rel="stylesheet" href="css/styles.css">  
+    <link rel="stylesheet" href="css/jquery-ui.min.css">  
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">  
+    <link rel="stylesheet" href="twicon/twicon.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- icons-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+        
+</head>
+<body>
+
+  <!-- 首頁 -->
+      <!-- 類別 -->
+      <!-- 收尋欄 -->
+      <!-- 收尋結果 4*4 -->
+      <!-- 頁籤 -->
+      
+<div class="menu">
+
+    <!-- <div class="banner">  -->
+    <div class="home" id="home"> 
+      <div><input type="button" class="logo"></div>
+      <div><button type="button" class="like">
+        <span class="ui-icon ui-icon-heart"></span>我的最愛</button>
+      </div>
+      <div><input type="button" class="caption" value="景點"></div>
+      <section>
+
+        <div><input type="button" class="category" value="景點" style="left: 188px;"><div class="img_icon"></div></div>
+        <div><input type="button" class="category" value="餐飲" style="left: 308px;"></div>
+        <div><input type="button" class="category" value="旅宿" style="left: 428px;"></div>
+        <div><input type="button" class="category" value="活動" style="left: 548px;"></div>
+        <!-- 用script在button標籤中增加圖示
+        <button>GFG Button</button>
+        <script>
+            $("button").button({
+                icon:"ui-icon ui-icon-heart"
+            });
+        </script> -->
+      </section>
+    </div>
+    <div class="Serch">
+
+    </div>
+
+</div>
+
+<!-- result -->
+<div class="content">
+    <div class="result mt-4">
+      <div class="line_1"></div>
+      <div class="result_title">搜尋結果</div>
+      <div class="sort font-4">排序
+        <select name="sort">
+          <option value="">排序選擇</option>
+          <option value="最新" selected>最新</option>
+          <option value="最舊">最舊</option>
+          <option value="收藏">收藏</option>
+          <option value="最近">最近</option>
+      </select>
+      </div>
+    </div>
+    
+</div>  
+
+<!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  
+    
+</body>
+</html>
