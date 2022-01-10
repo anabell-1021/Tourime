@@ -1,5 +1,5 @@
 /*-------------css reset--------------------------------------------------------------------*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -12,8 +12,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 5;
@@ -27,7 +27,7 @@ time, mark, audio, video {
     transition: none;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -157,20 +157,21 @@ color: var(--unnamed-color-ffffff);
 .menu{
     width: 100%;
     height: 400px;
-    background: transparent url("../img/banner.png") 0% 0% no-repeat padding-box;
+    background: transparent url("../img/banner.png") 0% 0% padding-box;
 
 }
 
 .home{
-    top: 0px;
+    top: 10px;
     left: 0px;
-    max-width:100%;
+    width:100%;
     display: flex;
     z-index: 100;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     opacity: 1;
+		background-size: cover;
 }
 
 .logo{
@@ -186,25 +187,20 @@ color: var(--unnamed-color-ffffff);
 
 .like{
     /* float: left;
-    border:0;
-    top: -130px;
-    width: 109px;
-    height: 35px;
-    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #0000001F;
-    border-radius: 6px;
     opacity: 1;   */
     /* position: fixed;
     right: 4em;
-    top: 10%;  
+    top: 10%;
     width: 109px;
     height: 35px;
     margin-top: -2.5em; */
+		position: -webkit-sticky;  /* for Safari */
     position: sticky;
-    top: -130px;
+		top: 0;
     width: 109px;
     height: 35px;
+		margin: 2em 0 0;
+
     z-index: 1;
     border:0;
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
@@ -264,7 +260,7 @@ color: var(--unnamed-color-ffffff);
     left: 258px;
     position:absolute;
     background: transparent url("../img/activity.png") top left no-repeat;  /* 滑鼠未移至文章時的icon */
-    padding-left: 14px; 
+    padding-left: 14px;
     opacity: 1;
 }
 
@@ -273,7 +269,7 @@ color: var(--unnamed-color-ffffff);
 }
 
 .img_icon:hover{
-    
+
     background: transparent url("../img/activity@2x.png")  top left no-repeat; ;
 }
 
@@ -298,7 +294,7 @@ color: var(--unnamed-color-ffffff);
 
 .result{
     display:inline-block;
-    
+
 }
 
 .result_title{
@@ -315,6 +311,7 @@ color: var(--unnamed-color-ffffff);
     opacity: 1;
 }
 
+
 select{
     background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -329,7 +326,5 @@ select{
 
 /* RWD */
 @media (max-width: 600px){
-    
+
 }
-
-
