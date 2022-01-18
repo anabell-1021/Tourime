@@ -23,6 +23,8 @@
     <script src="js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <!-- icons-->
     <link rel="shortcut icon" href="img/favicon.ico">
 
@@ -85,9 +87,9 @@
           <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
             <!-- <input type="search" id="search" placeholder="輸入想去的地區" required
             minlength="1" maxlength="4" size="4"/> -->
-            <select name="search">
-              <option value="">排序選擇</option>
-              <option value="Taipei" selected>台北市</option>
+            <select class="city" name="search">
+              <option value="Taipei" selected>輸入想去的地區</option>
+              <option value="Taipei">台北市</option>
               <option value="NewTaipei">新北市</option>
               <option value="Taoyuan">桃園縣</option>
               <option value="Taichung">台中市</option>
@@ -110,12 +112,18 @@
               <option value="PenghuCounty">澎湖群島</option>
               <option value="LienchiangCounty">馬祖列島</option>
             </select>
-          <span class="icon"><i class="fas fa-binoculars"></i></span>
-            <input type="search" id="search" placeholder="輸入景點名稱" />
-        </div>
+            <span class="icon"><i class="fas fa-binoculars"></i></span>
+              <input type="search" id="search" placeholder="輸入景點名稱關鍵字" class="keyword"/>
+            <select class="limit">
+              <option value="48">篩選筆數</option>
+              <option value="16">16</option>
+              <option value="48">48</option>
+              <option value="80">80</option>
+            </select>
+          </div>
         <div class="container-2">
           <span class="icon"><i class="fas fa-search"></i></i></span>
-          <input type="button" id ="button" class="spot" value="搜尋">
+          <input type="button" id ="button" class="send" value="搜尋">
         </div>
     </div>
 </div>
@@ -139,8 +147,7 @@
     <!-- <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/22c45b72065407.5bda97cb19e5e.jpg" > -->
     <div class="spot mt-3">
       <div class="box" data-target="box">
-        <img
-          class="spot-bg"
+        <img class="spot-bg"
           src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/2ed51c72065295.5bda96c5b8c3f.jpg"
           alt="景點圖片"
         >
@@ -154,7 +161,10 @@
         </div>
 
       </div>
+      <h2>景點列表</h2>
+        <ul class="list" data-target="avatar-thumbnail">
 
+        </ul>
     </div>
 
 
