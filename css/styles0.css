@@ -317,10 +317,10 @@ section{
 
 .icon{
 	display: flex;
-	padding-right: 5px;
 	padding-bottom: 10px;
+	margin-right: 5px;
   color: #4f5b66;
-	z-index: 30;
+	z-index: 20;
 }
 .category .icon{
     color: #407fa1;
@@ -349,7 +349,9 @@ html, body{overflow: -moz-scrollbars-vertical;}
 
 .search{
 	display: flex;
-	padding-left: 108px;
+	justify-content: space-between;
+	align-items: center;
+
 }
 
 .container-1{
@@ -366,8 +368,8 @@ html, body{overflow: -moz-scrollbars-vertical;}
 	font-size: 10pt;
 	color: #63717f;
 	float: left;
-	/* padding-left: 45px;
-	margin-left: 15px; */
+	padding-left: 45px;
+	margin-left: 15px;
 	-webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -381,19 +383,56 @@ html, body{overflow: -moz-scrollbars-vertical;}
 	border: none;
 	font-size: 10pt;
 	color: #63717f;
-	/*
 	float: left;
-  padding-left: 45px;
+	/* padding-left: 45px;
 	margin-left: 15px; */
 	-webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
+.search select.limit{
+    width: 100px;
+    height: 60px;
+    background: #ffffff;
+    border: none;
+    font-size: 10pt;
+    color: #63717f;
+    float: left;
+      /* padding-left: 15px;
+      margin-left: 15px; */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
 
 .container-2{
 }
 
+.container-2 input#button{
+	width: 135px;
+	height: 55px;
+	padding-left: 65px;
+	margin-left: 15px;
+	background: var(--unnamed-color-b72323) 0% 0% no-repeat padding-box;
+	background: #B72323 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 6px #00000029;
+	border-radius: 8px;
+	opacity: 1;
+	font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-26) var(--unnamed-font-family-roboto);
+	letter-spacing: var(--unnamed-character-spacing-0);
+	color: var(--unnamed-color-ffffff);
+	text-align: left;
+	font: normal normal normal 16px/16px Roboto;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+}
+
+.container-2 .icon{
+	font-size: 20px;
+  color: #FFFFFF;
+}
 
 
 
