@@ -7,10 +7,10 @@
     const list = document.querySelector('.list');
     send.addEventListener('click',function(e){
       const areacity = area.value;
-      const keywordTxt = keyword.value;
+      const keywordTxt = keyword.value; 
       const limitNum = limit.value;
-
-      axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/${areacity}?%24filter=contains(ScenicSpotName%2C'${keywordTxt}')&%24top=${limitNum}&%24format=JSON`
+  
+      axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/${areacity}?%24filter=contains(ScenicSpotName%2C'${keywordTxt}')&%24top=${limitNum}&%24format=JSON` 
        ,
         {
           headers: getAuthorizationHeader()
@@ -36,19 +36,19 @@
             <input type="button" id ="tag" class="tag" value="${item.Class1}">
             <input type="button" id ="tag" class="tag" value="${item.Class2}">
           </div>
-
+        
         </li>`
         })
         list.innerHTML = str;
       })
         .catch(function (error) {
         console.log(error);
-      });
+      }); 
     })
-
-
-
-
+  
+  
+  
+  
     function getAuthorizationHeader() {
       //  填入自己 ID、KEY 開始
       let AppID = 'd595bbed3b664388a6813b013e4a6d3a';
@@ -60,11 +60,11 @@
       ShaObj.update('x-date: ' + GMTString);
       let HMAC = ShaObj.getHMAC('B64');
       let Authorization = 'hmac username=\"' + AppID + '\", algorithm=\"hmac-sha1\", headers=\"x-date\", signature=\"' + HMAC + '\"';
-      return { 'Authorization': Authorization, 'X-Date': GMTString };
+      return { 'Authorization': Authorization, 'X-Date': GMTString }; 
     }
-
+  
   })();
-
-  //`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/${areacity}?%24filter=contains(ScenicSpotName%2C'${keywordTxt}')&%24top=${limitNum}&%24format=JSON`
-
+  
+  //`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot/${areacity}?%24filter=contains(ScenicSpotName%2C'${keywordTxt}')&%24top=${limitNum}&%24format=JSON`   
+      
   
